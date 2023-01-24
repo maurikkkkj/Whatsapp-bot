@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp",
+  "version": "3.5.0",
+  "description": "WhatsApp bot multi-device made by mauri.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "mauri",
+  "license": "ISC",
+  "dependencies": {
+    "@open-wa/wa-automate": "^4.55.2",
+    "axios": "^1.2.4",
+    "fs": "^0.0.1-security"
+  }
+}
