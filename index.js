@@ -19,7 +19,10 @@ function start(client) {
   client.onMessage(async message => {
     if (message.body === "thinking") {
     const gif4 = await fs.readFileSync('./lib/pensando.webp', { encoding: 'base64' });
-		await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
+    await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
+    }
+if (message.body === "hello") {
+    await client.sendText(message.from, `Hello!`);
     }
   });
 }
