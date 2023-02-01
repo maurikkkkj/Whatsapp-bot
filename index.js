@@ -22,7 +22,9 @@ function start(client) {
     await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
     }
 if (message.body === "hello") {
-    await client.sendText(message.from, `Hello!`);
+  let sections = [{title:'sectionTitle',rows:[{title:'ListItem1', description: 'desc'},{title:'ListItem2'}]}];
+  let list = new list_response('List body','btnText',sections,'Title','footer');
+  await client.sendText(message.from, list);
     }
   });
 }
