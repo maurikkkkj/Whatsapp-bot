@@ -16,13 +16,21 @@ wa.create({
 }).then(client => start(client));
 
 function start(client) {
-  client.onMessage(async message => {
-    if (message.body === "thinking") {
-    const gif4 = await fs.readFileSync('./lib/pensando.webp', { encoding: 'base64' });
-    await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
-    }
-if (message.body === "hello") {
-  let sections = [{title:'sectionTitle',rows:[{title:'ListItem1', description: 'desc'},{title:'ListItem2'}]}];
+client.onMessage(async message => {
+if (message.body === "thinking") {
+const gif4 = await fs.readFileSync('./lib/pensando.webp', { encoding: 'base64' });
+await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
+}
+  
+  if (message.body === "hello") {
+  let sections = [
+  {title:'t',
+  rows:[
+  {title:'t', 
+  description: 'a'},
+  {title:'b'}
+  ]
+  }];
   let list = new list_response('List body','btnText',sections,'Title','footer');
   await client.sendText(message.from, list);
     }
