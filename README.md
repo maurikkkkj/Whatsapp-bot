@@ -1,11 +1,11 @@
 
 ---
 
-💖 Simple
+💖 Simples
 ---
-💛 Created in JavaScript
+💛 Criado em JavaScript
 ---
-🖤 I'll add more stuff soon...
+🖤 Novos recursos em breve...
 ---
 
 ---
