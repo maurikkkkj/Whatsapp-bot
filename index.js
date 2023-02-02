@@ -17,22 +17,10 @@ wa.create({
 
 function start(client) {
 client.onMessage(async message => {
-if (message.body === "thinking") {
+if (message.body === "pensamento suicidas") {
 const gif4 = await fs.readFileSync('./lib/pensando.webp', { encoding: 'base64' });
 await client.sendImageAsSticker(message.from, `data:image/gif;base64,${gif4.toString('base64')}`);
 }
-  
-  if (message.body === "hello") {
-  let sections = [
-  {title:'t',
-  rows:[
-  {title:'t', 
-  description: 'a'},
-  {title:'b'}
-  ]
-  }];
-  let list = new list_response('List body','btnText',sections,'Title','footer');
-  await client.sendText(message.from, list);
     }
   });
 }
