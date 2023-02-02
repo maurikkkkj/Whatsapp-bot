@@ -8,7 +8,7 @@ wazap.create({
   authTimeout: 60,
   blockCrashLogs: true,
   disableSpins: true,
-  headless: false,
+  headless: true,
   hostNotificationLang: 'PT_BR',
   logConsole: false,
   popup: true,
